@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery • Christmas in ICONS</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<div class="icons-christmas-header">
+  <img src="logo.png" class="logo" alt="Icons International School Logo">
+
+  <div class="icons-christmas-title">
+    <div class="title-main">
+      <span class="gold">Christmas and Children's Day</span>
+      <span class="red">in ICONS</span>
+    </div>
+    <div class="title-sub">
+      <h1>Icons International School</h1>
+      Friday, 5 December 2025
+    </div>
+  </div>
+
+  <div class="santa-badge" aria-hidden="true">🎅</div>
+</div>
+<section class="top-slider">
+  <div class="slides">
+    <img src="Christmas_Banner_1.png" class="slide active" alt="Banner 1">
+    <img src="Children's_Day.png" class="slide" alt="Banner 2">
+    <img src="Christmas_Banner_3.png" class="slide" alt="Banner 3">
+  </div>
+</section>
+<header class="site-header">
+  <nav class="main-nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="programme.html" class="nav-link">Programme</a>
+    <a href="activities.html" class="nav-link">Activities</a>
+    <a href="santa.html" class="nav-link">Secret Santa</a>
+    <a href="valuetree.html" class="nav-link">Shared Value Tree</a>
+    <a href="gallery.html" class="nav-link active">Gallery</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <h2 class="section-title">Photos & Videos</h2>
+
+  <!-- Subtabs -->
+  <div class="subtabs">
+    <button class="subtab-btn active" data-subtab="photosPanel">Photos</button>
+    <button class="subtab-btn" data-subtab="videosPanel">Videos</button>
+  </div>
+
+  <!-- PHOTOS PANEL -->
+  <section id="photosPanel" class="subtab-panel active">
+    <div id="photos1" class="gallery-grid">
+
+      <!-- ===== PHOTOS (ADD MORE BELOW) ===== -->
+      <div class="gallery-item">
+        <img src="2brighton.jpg" alt="Christmas Celebration" width="200" height="200">
+      </div>
+
+      <div class="gallery-item">
+        <img src="Y4-1.jpg" alt="Children's Day Activity" width="200" height="200">
+      </div>
+
+      <div class="gallery-item">
+        <img src="Y4-2.jpg" alt="Performance on Stage" width="200" height="200">
+      </div>
+<div class="gallery-item">
+        <img src="image-1.jpeg" alt="Performance on Stage" width="200" height="200">
+      </div>
+<div class="gallery-item">
+        <img src="image-2.jpeg" alt="Performance on Stage" width="200" height="200">
+      </div>
+<div class="gallery-item">
+        <img src="image-3.jpeg" alt="Performance on Stage" width="200" height="200">
+      </div>
+<div class="gallery-item">
+        <img src="image-4.jpeg" alt="Performance on Stage" width="200" height="200">
+      </div>
+<div class="gallery-item">
+        <img src="image-5.jpeg" alt="Performance on Stage" width="200" height="200">
+      </div>
+<div class="gallery-item">
+        <img src="image10.jpeg" alt="Performance on Stage" width="200" height="200">
+      </div>
+<div class="gallery-item">
+        <img src="image11.jpeg" alt="Performance on Stage" width="200" height="200">
+      </div>
+<div class="gallery-item">
+        <img src="image12.jpeg" alt="Performance on Stage" width="200" height="200">
+      </div>
+<div class="gallery-item">
+        <img src="image13.jpeg" alt="Performance on Stage" width="200" height="200">
+      </div>
+<div class="gallery-item">
+        <img src="image14.jpeg" alt="Performance on Stage" width="200" height="200">
+      </div>
+<div class="gallery-item">
+        <img src="image15.jpeg" alt="Performance on Stage" width="200" height="200">
+      </div>
+
+
+      <!-- Add more using the same format -->
+      <!--
+      <div class="gallery-item">
+        <img src="photos/yourfile.jpg" alt="Your caption">
+      </div>
+      -->
+
+    </div>
+  </section>
+
+  <!-- VIDEOS PANEL -->
+  <section id="videosPanel" class="subtab-panel">
+    <div id="videos" class="video-grid">
+
+      
+      <!-- ===== LOCAL MP4 VIDEO ===== -->
+      <div class="video-item">
+        <video controls>
+          <source src="Video-1.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Another MP4 video -->
+      <div class="video-item">
+        <video controls>
+          <source src="video2.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Add more videos below -->
+      <!--
+      <div class="video-item">
+        <video controls>
+          <source src="videos/yourvideo.mp4" type="video/mp4">
+        </video>
+      </div>
+      -->
+
+    </div>
+
+    <p class="muted-text" style="margin-top:10px;">
+          </p>
+  </section>
+
+</main>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span id="closeLightbox" class="lightbox-close">&times;</span>
+  <img id="lightboxImg" alt="">
+  <div id="lightboxCaption" class="lightbox-caption"></div>
+</div>
+
+<footer>
+  Icons International School • “Icons Aren’t Born, They’re Made.”
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // Handle subtabs switching
+  const subtabButtons = document.querySelectorAll(".subtab-btn");
+  const subtabPanels = document.querySelectorAll(".subtab-panel");
+
+  subtabButtons.forEach(button => {
+    button.addEventListener("click", () => {
+
+      // Remove active state
+      subtabButtons.forEach(btn => btn.classList.remove("active"));
+      subtabPanels.forEach(panel => panel.classList.remove("active"));
+
+      // Add active state
+      button.classList.add("active");
+      const target = document.getElementById(button.dataset.subtab);
+      target.classList.add("active");
+    });
+  });
+</script>
+
+</body>
+</html>

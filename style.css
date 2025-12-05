@@ -1,0 +1,1183 @@
+:root{
+  --red:#c30000;
+  --red-dark:#a80000;
+  --green:#1f6f5b;
+  --bg:#ffffff;
+  --soft:#f7f7f7;
+  --text:#1e1e1e;
+  --muted:#666;
+  --card:#fff;
+  --border:#e9e9e9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fafafa;      /* Light grey background */
+  color: var(--text);
+  line-height: 1.6;
+}
+
+
+
+/* ===== Header ===== */
+.site-header{
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+.topbar{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:16px;
+}
+/* Your logo clean (no box) */
+.logo{
+  width:120px;
+  height:auto;
+  object-fit:contain;
+  background:none;
+  padding:0;
+  border:none;
+  box-shadow:none;
+}
+
+/* Christmas in ICONS title */
+.icons-christmas-title{
+  flex:1;
+  text-align:center;
+}
+
+.title-main{
+  font-family:'Pacifico', cursive;
+  font-size:3.2rem;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  line-height:1.1;
+}
+
+.title-main .gold{ color:#d4a017; }
+.title-main .red{ color:#c30000; }
+
+.title-sub{
+  margin-top:6px;
+  font-size:1.2rem;
+  color:#555;
+  font-weight:600;
+}
+
+/* Santa mascot badge */
+.santa-badge{
+  font-size:3.2rem;      /* big and visible */
+  border:2px solid #c30000;
+  width:85px;
+  height:85px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:none;
+  box-shadow:none;
+}
+
+/* Make it responsive on phone */
+@media(max-width:700px){
+  .icons-christmas-header{
+    flex-direction:column;
+    text-align:center;
+  }
+  .title-main{ font-size:2.4rem; }
+  .santa-badge{ font-size:2.5rem; width:70px; height:70px; }
+}
+
+.title-wrap h1{
+  font-size:1.9rem;
+  color:var(--red);
+}
+.title-wrap p{
+  color:var(--muted);
+  margin-top:2px;
+}
+
+/* Header strip container */
+.icons-christmas-header{
+  max-width:1200px;
+  margin:0 auto;
+  padding:18px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+
+/* ===== Red nav bar ===== */
+.main-nav{
+  background:var(--red);
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:6px;
+  padding:8px 10px;
+}
+.nav-link{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  padding:8px 14px;
+  border-radius:6px;
+  transition:0.2s ease;
+}
+.nav-link:hover{
+  background:var(--red-dark);
+}
+.nav-link.active{
+  background:white;
+  color:var(--red);
+}
+
+/* ===== Page layout ===== */
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:22px 16px;
+}
+
+/* ===== Hero banner (homepage) ===== */
+.hero-banner{
+  background:linear-gradient(135deg,#fff,#ffeaea,#fff);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:22px;
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:16px;
+  align-items:center;
+}
+.hero-banner h2{
+  font-size:1.6rem;
+  color:var(--red);
+  margin-bottom:6px;
+}
+.hero-banner p{color:var(--muted);}
+.hero-banner img{
+  width:100%;
+  border-radius:12px;
+  object-fit:cover;
+  min-height:220px;
+  border:1px solid var(--border);
+}
+
+/* ===== Section titles ===== */
+.section-title{
+  margin:20px 0 10px;
+  font-size:1.4rem;
+  border-left:5px solid var(--red);
+  padding-left:10px;
+}
+
+/* ===== Cards grid ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:14px;
+}
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+.card img{
+  width:100%;
+  height:170px;
+  object-fit:cover;
+}
+.card-body{
+  padding:12px 14px;
+}
+.card-body h3{
+  color:var(--red);
+  font-size:1.1rem;
+  margin-bottom:4px;
+}
+.card-body p{
+  color:var(--muted);
+  font-size:0.95rem;
+}
+
+/* ===== Footer ===== */
+footer{
+  margin-top:30px;
+  padding:14px;
+  text-align:center;
+  background:#fff;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+  font-size:0.95rem;
+}
+
+.big-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 0 0 30px; /* more spacing */
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  transition: all 0.25s ease;
+  border: 1px solid #e9e9e9;
+  text-align: center;        /* CENTER ALL TEXT */
+  max-width: 350px;          /* consistent size */
+  margin: 0 auto;            /* nicely centered */
+}
+
+.big-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.15);
+}
+
+.big-card img {
+  width: 100%;
+  height: 210px;             /* shorter like example */
+  border-radius: 18px 18px 0 0;
+  object-fit: cover;
+  display: block;
+}
+
+.big-card-title {
+  padding: 20px 22px 10px;
+  font-size: 1.45rem;        /* slightly smaller */
+  color: #c30000;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;        /* CENTER */
+}
+
+.big-card p {
+  padding: 0 22px 12px;
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.45;
+  text-align: center;        /* CENTER */
+}
+
+.big-card-btn {
+  margin-top: 12px;
+  padding: 12px 36px;
+  background: #c30000;
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 1.15rem;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.big-card-btn:hover {
+  background: #a80000;
+  transform: scale(1.08);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+.top-slider{
+  max-width:1200px;
+  margin:18px auto 0;
+  padding:0 16px;
+}
+
+/* Increase height so images are not cut */
+.slides{
+  position:relative;
+  width:100%;
+  height:520px;          /* ⬅ Increased from 260px → 420px */
+  overflow:hidden;
+  border-radius:14px;
+  background:#eee;
+  border:1px solid #e5e5e5;
+}
+
+.slide{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;           /* fill the banner */
+  object-position:center top; /* ⬅ prevent cutting faces */
+  opacity:0;
+  transition:opacity 1s ease; 
+}
+
+.slide.active{
+  opacity:1;
+}
+/* Shared Value Tree page */
+.info-card{
+  background:#fff;
+  border:1px solid #eee;
+  border-radius:14px;
+  padding:18px 20px;
+  margin:16px 0;
+  box-shadow:0 4px 12px rgba(0,0,0,0.06);
+}
+
+.info-card h3{
+  color:#c30000;
+  font-size:1.5rem;
+  margin-bottom:10px;
+}
+
+.info-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  font-size:1.1rem;
+}
+
+@media(max-width:800px){
+  .info-grid{ grid-template-columns:1fr; }
+}
+
+.nice-list{
+  padding-left:20px;
+  font-size:1.1rem;
+  line-height:1.6;
+}
+
+.purpose{
+  border-left:6px solid #c30000;
+}
+
+.subheading{
+  font-size:1.6rem;
+  margin:20px 0 6px;
+}
+
+.muted-text{
+  color:#555;
+  margin-bottom:10px;
+  font-size:1.05rem;
+}
+
+.tree-gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:16px;
+  margin:12px 0 20px;
+}
+
+.tree-figure{
+  background:#fff;
+  border:1px solid #eee;
+  border-radius:12px;
+  padding:8px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.05);
+}
+
+.tree-figure img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+.tree-figure figcaption{
+  text-align:center;
+  font-size:1.05rem;
+  margin-top:8px;
+  color:#333;
+  font-weight:600;
+}
+
+.video-placeholder{
+  background:#fafafa;
+  border:2px dashed #ddd;
+  border-radius:12px;
+  padding:20px;
+  text-align:center;
+  font-size:1.1rem;
+}
+
+.tree-video{
+  width:100%;
+  max-height:480px;
+  border-radius:12px;
+  background:#000;
+  margin-top:10px;
+}
+/* ===== GALLERY LAYOUT ===== */
+.subtabs{
+  display:flex;
+  gap:10px;
+  margin:10px 0 16px;
+}
+
+.subtab-btn{
+  padding:8px 14px;
+  border:1px solid #c30000;
+  background:#fff;
+  color:#c30000;
+  border-radius:8px;
+  font-weight:700;
+  font-size:1rem;
+  cursor:pointer;
+}
+
+.subtab-btn.active{
+  background:#c30000;
+  color:#fff;
+}
+
+.subtab-panel{ display:none; }
+.subtab-panel.active{ display:block; }
+
+/* Photo grid (3 desktop / 2 tablet / 1 phone) */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:16px;
+}
+
+@media(max-width:900px){
+  .gallery-grid{ grid-template-columns:repeat(2, 1fr); }
+}
+@media(max-width:600px){
+  .gallery-grid{ grid-template-columns:1fr; }
+}
+
+/* Photo card */
+.photo-item{
+  background:#fff;
+  border:1px solid #eee;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 3px 10px rgba(0,0,0,0.06);
+  transition:0.2s ease;
+}
+.photo-item:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 18px rgba(0,0,0,0.12);
+}
+
+.photo-item img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  display:block;
+  cursor:pointer;
+}
+
+.photo-item .caption{
+  padding:10px 12px;
+  font-size:1.05rem;
+  text-align:center;
+  font-weight:700;
+  color:#333;
+}
+
+/* Video grid */
+.video-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  gap:16px;
+}
+
+.video-item{
+  background:#fff;
+  border:1px solid #eee;
+  border-radius:12px;
+  padding:8px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.06);
+}
+
+.video-item iframe,
+.video-item video{
+  width:100%;
+  height:260px;
+  border-radius:10px;
+  background:#000;
+}
+
+.video-item .caption{
+  padding:8px 10px;
+  font-size:1.05rem;
+  text-align:center;
+  font-weight:700;
+}
+
+/* Lightbox */
+.lightbox{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.85);
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  z-index:9999;
+  padding:20px;
+}
+
+.lightbox img{
+  max-width:92vw;
+  max-height:78vh;
+  border-radius:10px;
+}
+
+.lightbox-caption{
+  color:#fff;
+  margin-top:10px;
+  font-size:1.2rem;
+  text-align:center;
+}
+
+.lightbox-close{
+  position:absolute;
+  top:12px;
+  right:20px;
+  font-size:2.2rem;
+  color:#fff;
+  cursor:pointer;
+}
+.tree-gallery-row{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:18px;
+  margin:18px 0 24px;
+}
+
+.tree-photo{
+  background:#fff;
+  border:1px solid #eee;
+  padding:10px;
+  border-radius:12px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.08);
+  text-align:center;
+}
+
+.tree-photo img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+.caption{
+  margin-top:8px;
+  font-size:1rem;
+  font-weight:700;
+  color:#333;
+}
+
+/* ✅ Responsive */
+@media(max-width:900px){
+  .tree-gallery-row{ grid-template-columns:repeat(2, 1fr); }
+}
+
+@media(max-width:600px){
+  .tree-gallery-row{ grid-template-columns:1fr; }
+}
+.section-title {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.footer{
+  text-align:center;
+  margin:70px 0 35px;
+}
+
+/* Line 1: Pacifico gold (only line in script) */
+.footer-line1{
+  font-family:'Pacifico', cursive;
+  font-size:20px;
+  color:#C9A646;     /* soft gold */
+  margin-bottom:10px;
+}
+
+/* Line 2: clean bold red (non-script to reduce crowding) */
+.footer-line2{
+  font-family: Arial, sans-serif;
+  font-size:16px;
+  font-weight:700;
+  color:#B30000;
+  letter-spacing:0.6px;
+  margin-bottom:8px;
+}
+
+/* Line 3: small, soft, simple */
+.footer-line3{
+  font-family: Arial, sans-serif;
+  font-size:14px;
+  color:#9B7A2F;     /* muted gold */
+  font-style:italic;
+}
+
+/* ==========================
+   PROGRAMME – TIME BLOCKS
+   ========================== */
+
+.programme-page{
+  padding-top: 8px;
+}
+
+/* Time block wrapper: left column (time), right column (cards) */
+.time-block{
+  background:#fff;
+  border-radius:16px;
+  border:1px solid #e3e3e3;
+  box-shadow:0 6px 18px rgba(0,0,0,0.05);
+  margin-bottom:18px;
+  display:grid;
+  grid-template-columns:220px minmax(0, 1fr);
+  overflow:hidden;
+}
+
+/* Left timeline column */
+.time-block-left{
+  padding:16px 18px;
+  border-right:1px solid #ececec;
+  background:#fafafa;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  justify-content:center;
+}
+
+.time-range{
+  font-weight:700;
+  font-size:1rem;
+  color:#222;
+}
+
+.time-note{
+  font-size:0.9rem;
+  color:#555;
+}
+
+.time-meta{
+  font-size:0.85rem;
+  color:#999;
+}
+
+/* Right side with horizontally scrolling cards */
+.time-block-right{
+  padding:14px 16px 18px;
+}
+
+.session-scroller{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:14px;
+  overflow:visible;
+}
+
+/* subtle scrollbar like the reference */
+.session-scroller::-webkit-scrollbar{
+  height:6px;
+}
+.session-scroller::-webkit-scrollbar-track{
+  background:#f1f1f1;
+  border-radius:999px;
+}
+.session-scroller::-webkit-scrollbar-thumb{
+  background:#d0d0d0;
+  border-radius:999px;
+}
+
+/* Individual session cards */
+.session-card{
+  width:100%;
+  background:#fff;
+  border-radius:12px;
+  border:1px solid #e4e4e4;
+  padding:12px 14px 14px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.04);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  transition:transform 0.18s ease, box-shadow 0.18s ease,
+             border-color 0.18s ease;
+}
+
+
+.session-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 24px rgba(0,0,0,0.12);
+  border-color:rgba(195,0,0,0.6);
+}
+
+/* Header strip (label + type) */
+.session-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:6px;
+  font-size:0.78rem;
+}
+
+.session-label{
+  padding:3px 8px;
+  border-radius:999px;
+  background:#fff7e3;
+  border:1px solid #f1cf80;
+  color:#b27a08;
+  font-weight:700;
+}
+
+.session-type{
+  font-size:0.8rem;
+  color:#777;
+}
+
+/* Main title & time */
+.session-title{
+  font-size:1.02rem;
+  font-weight:700;
+  margin-bottom:2px;
+  color:#222;
+}
+
+.session-time{
+  font-size:0.86rem;
+  color:#999;
+  margin-bottom:6px;
+}
+
+/* Body */
+.session-body p{
+  font-size:0.9rem;
+  color:#555;
+}
+
+.session-body ul{
+  margin:4px 0 0;
+  padding-left:18px;
+  font-size:0.9rem;
+  color:#555;
+}
+
+.session-body li{
+  margin-bottom:2px;
+}
+
+/* Footer badges */
+.session-footer{
+  margin-top:8px;
+}
+
+.pill{
+  display:inline-block;
+  padding:4px 9px;
+  border-radius:999px;
+  font-size:0.8rem;
+  font-weight:700;
+}
+
+/* colour-coding, matching your palette */
+.pill-all{
+  background:#f0f0f0;
+  color:#444;
+}
+
+.pill-primary{
+  background:rgba(31,111,91,0.08);
+  color:#1f6f5b;
+  border:1px solid rgba(31,111,91,0.4);
+}
+
+.pill-secondary{
+  background:rgba(195,0,0,0.08);
+  color:#c30000;
+  border:1px solid rgba(195,0,0,0.5);
+}
+
+.pill-staff{
+  background:rgba(212,160,23,0.12);
+  color:#ab7e10;
+  border:1px solid rgba(212,160,23,0.5);
+}
+
+/* Responsive: stack left/right on small screens */
+@media(max-width:800px){
+  .time-block{
+    grid-template-columns:1fr;
+  }
+  .time-block-left{
+    border-right:none;
+    border-bottom:1px solid #ececec;
+  }
+}
+
+/* Page layout */
+.container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.container h2 {
+  font-size: 2rem;
+  color: var(--red);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Two-column grid */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.8rem;
+}
+
+/* Activity card */
+.activity-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #e4e4e4;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: box-shadow .25s, transform .15s;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.activity-card h3 {
+  margin: 0 0 0.5rem;
+  color: var(--green);
+}
+
+.label {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  font-size: 0.8rem;
+  padding: 3px 10px;
+  border-radius: 999px;
+  color: #fff;
+}
+
+.label.secondary { background: var(--green); }
+.label.primary { background: var(--red); }
+
+.activity-info p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Activities Page ===== */
+
+.activities-page {
+  max-width: 1000px;
+  margin: 2.5rem auto 3rem;
+  padding: 0 1.5rem 3rem;
+}
+
+/* Hero text */
+.activities-hero {
+  text-align: center;
+  background: linear-gradient(135deg, #00c9ff, #92fe9d);
+  padding: 1.6rem 1.2rem;
+  border-radius: 1.25rem;
+  color: #ffffff;
+  margin-bottom: 2.2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.activities-hero h2 {
+  font-size: 2.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.activities-hero p {
+  font-size: 0.98rem;
+}
+
+/* Two-column grid */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.8rem;
+}
+
+/* Cards */
+.activity-card {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  border: 1px solid #e9e9e9;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+
+/* Colour strips at top */
+.activity-ribbon {
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.activity-treasure .activity-ribbon {
+  background: linear-gradient(90deg, #ffb347, #ffcc33);
+}
+
+.activity-bubble .activity-ribbon {
+  background: linear-gradient(90deg, #ff6fd8, #ffb86c);
+}
+
+/* Body content */
+.activity-body {
+  padding: 1.3rem 1.4rem 1.4rem;
+}
+
+.activity-body h3 {
+  margin: 0.2rem 0 0.4rem;
+  color: var(--green);
+}
+
+.activity-time {
+  margin-top: 0.3rem;
+}
+
+.activity-desc {
+  margin: 0.6rem 0 0.7rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* Tags (Primary / Secondary) */
+.activity-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+
+.tag-secondary {
+  background: var(--green);
+}
+
+.tag-primary {
+  background: var(--red);
+}
+
+/* Bullet lists */
+.activity-points {
+  list-style: none;
+  padding-left: 1.1rem;
+  margin: 0.3rem 0 0.7rem;
+}
+
+.activity-points li {
+  position: relative;
+  margin-bottom: 0.25rem;
+  font-size: 0.93rem;
+}
+
+.activity-points li::before {
+  content: "✦";
+  position: absolute;
+  left: -1.1rem;
+  top: 0.05rem;
+  font-size: 0.7rem;
+  color: var(--red);
+}
+
+/* Small headings inside card */
+.mini-heading {
+  font-size: 0.9rem;
+  margin: 0.5rem 0 0.25rem;
+  color: var(--text);
+}
+
+/* Example speech bubbles */
+.bubble-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.3rem;
+}
+
+.bubble-examples span {
+  font-size: 0.8rem;
+  background: #fff7fb;
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid #ffd4f1;
+  position: relative;
+}
+
+/* Little "tail" to look like a speech bubble */
+.bubble-examples span::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 10px;
+  border-width: 6px 6px 0 0;
+  border-style: solid;
+  border-color: #ffd4f1 transparent transparent transparent;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .activities-page {
+    padding: 0 1rem 2.5rem;
+  }
+}
+
+.time-block-right {
+  overflow: hidden;   /* hides the little sliver of the next card */
+}
+
+.session-scroller {
+  padding-right: 8px;  /* you can keep your other properties */
+}
+
+.session-scroller {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  overflow: visible;
+}
+
+.pill-red {
+  background: #f9d7d7;     /* soft light red (similar to light grey pill background) */
+  color: #a80000;          /* your festive dark red */
+  padding: 8px 16px;
+  border-radius: 999px;    /* makes it fully rounded like your example */
+  font-weight: 700;
+  display: inline-block;
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+.subtab-panel {
+  display: none;
+}
+
+.subtab-panel.active {
+  display: block;
+}.rehearsal-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #a80000; /* festive red */
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.rehearsal-link:hover {
+  text-decoration: underline;
+}
+
+/* Secondary rehearsal page */
+
+.rehearsal-page {
+  margin-top: 24px;
+  margin-bottom: 40px;
+}
+
+.rehearsal-subtitle {
+  font-size: 0.95rem;
+  color: #777;
+  margin-bottom: 16px;
+}
+
+.rehearsal-card {
+  max-width: 640px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e4e4e4;
+  padding: 20px 24px 24px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+}
+
+.rehearsal-heading {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.rehearsal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+}
+
+.rehearsal-list li {
+  display: flex;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.rehearsal-list li:last-child {
+  border-bottom: none;
+}
+
+.slot-time {
+  font-weight: 700;
+  min-width: 90px;
+  color: #c30000; /* your red */
+}
+
+.slot-group {
+  font-weight: 500;
+  color: #333;
+}
+
+.rehearsal-note {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.rehearsal-subtitle {
+  font-size: 1.25rem;   /* bigger */
+  font-weight: 700;     /* bold */
+  color: #a80000;       /* festive red (optional) */
+  margin-bottom: 10px;  /* spacing */
+}
+
+
+
+
+
